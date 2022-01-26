@@ -1,38 +1,187 @@
-.App {
-  text-align: center;
+body,
+html {
+  margin: 0;
+  padding: 0;
+  background-color: #20203b;
+  color: white;
+  font-family: sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
+.App {
+  height: 70vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 35% 25% 40%;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.lights,
+.switch {
+  align-self: center;
+  justify-self: center;
+}
+
+.lights {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.light {
+  height: 50px;
+  width: 50px;
+  display: inline-block;
+  border-radius: 100%;
+}
+
+.light:nth-child(1),
+.light:nth-child(5) {
+  background-color: #eb4c42;
+  color: #eb4c42;
+}
+
+.light:nth-child(2),
+.light:nth-child(6) {
+  background-color: #1dacd6;
+  color: #1dacd6;
+}
+
+.light:nth-child(3),
+.light:nth-child(7) {
+  background-color: #f4ca16;
+  color: #f4ca16;
+}
+
+.light:nth-child(4) {
+  background-color: #5ab81c;
+  color: #5ab81c;
+}
+
+.switched-lights {
+  animation-name: lightsanim;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@keyframes lightsanim {
+  0% {
+    box-shadow: 0 0 5px currentColor;
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+    box-shadow: 0 0px 30px currentColor;
+  }
+}
+.light:nth-child(2n) {
+  margin-top: 8px;
+}
+.name {
+  font-size: 24px;
+  text-shadow: 0 0 7px white;
+}
+.buttons-container {
+  display: flex;
+  justify-content: center;
+}
+
+.name,
+.buttons-container {
+  padding: 0.3em;
+}
+.switch-button {
+  background-color: #3c3c6e;
+  color: white;
+  border: 3px solid #3c3c6e;
+  font-size: 20px;
+  padding: 0 0.7em 0 0.7em;
+  cursor: pointer;
+}
+
+.switch-button-clicked {
+  background-color: #4d4d8e;
+}
+.speed-management-container {
+  justify-self: center;
+  margin-top: 2em;
+}
+
+.text {
+  padding-bottom: 1em;
+  text-align: center;
+  font-size: 18px;
+}
+.speed-management {
+  height: 4em;
+  display: grid;
+  grid-template-rows: 50% 50%;
+}
+
+.cross {
+  padding: 0.5em;
+}
+
+.speed-input {
+  border: none;
+  padding: 3px 10px 3px 10px;
+}
+
+.speed-input:focus {
+  outline: 3px solid #20203b;
+}
+
+.input-container {
+  background-color: #3c3c6e;
+  padding-right: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.apply-button {
+  background-color: #1bd306;
+  font-weight: 600;
+  color: #252525;
+  box-shadow: 0 0 5px #1bd306;
+  border: none;
+  border-radius: 3px;
+  padding: 0 1em 0 1em;
+  margin-top: 4px;
+  cursor: pointer;
+}
+
+.apply-button:hover {
+  box-shadow: 0 0 7px #1bd306;
+}
+
+@media (min-width: 1000px) {
+  .name {
+    font-size: 40px;
+  }
+  .switch-button {
+    font-size: 20px;
+    padding: 0.1 0.6em 0.1 0.6em;
+  }
+  .speed-management {
+    height: auto;
+    display: flex;
+  }
+  .apply-button {
+    margin-left: 10px;
+    margin-top: 0;
+  }
+  .lights {
+    width: 60%;
+    justify-content: space-around;
+  }
+  .light {
+    height: 100px;
+    width: 100px;
   }
 }
