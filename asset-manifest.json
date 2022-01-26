@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/christmas-light/static/css/main.2c11efdf.css",
+    "main.js": "/christmas-light/static/js/main.29e5e1b4.js",
+    "static/js/787.9815f9dd.chunk.js": "/christmas-light/static/js/787.9815f9dd.chunk.js",
+    "index.html": "/christmas-light/index.html",
+    "main.2c11efdf.css.map": "/christmas-light/static/css/main.2c11efdf.css.map",
+    "main.29e5e1b4.js.map": "/christmas-light/static/js/main.29e5e1b4.js.map",
+    "787.9815f9dd.chunk.js.map": "/christmas-light/static/js/787.9815f9dd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2c11efdf.css",
+    "static/js/main.29e5e1b4.js"
+  ]
+}
