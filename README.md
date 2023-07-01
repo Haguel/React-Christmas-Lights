@@ -1,10 +1,10 @@
 ## Description
-This is one of the my first react apps. Here I made simple christmas-light.
+This is one of the my first react apps. Here I made simple christmas lights.
 
 ## How to start
 
-### `git clone https://github.com/TsugaruBurst/christmas-light.git`
-### `cd christmas-light`
+### `git clone https://github.com/TsugaruBurst/React-Christmas-Lights.git`
+### `cd React-Christmas-Lights`
 ### `npm install`
 ### `npm run start`
 
